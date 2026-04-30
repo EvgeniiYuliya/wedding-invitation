@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Евгений & Юлия | Свадьба</title>
+  <title>Таня & Ярослав | Свадьба</title>
   
   <!-- Подключаем шрифты: Cormorant Garamond (для красоты) и Montserrat (для текста) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -231,53 +231,49 @@
     <!-- Главный экран -->
     <header class="hero">
       <div class="photo-frame">
-        <img src="Weixin YliaEvgen.png" alt="Евгений и Юлия">
+        <img src="Weixin YliaEvgen.jpg" alt="Евгений и Юлия">
       </div>
       
       <h1 class="names">Евгений <br> & <br> Юлия</h1>
       
       <div class="date-main">16 Мая 2026</div>
-      <p style="margin-top: 20px; font-style: italic; color: #7a8a7a; font-size: 1.1rem;">Приглашаем вас разделить нашу радость</p>
+      <p style="margin-top: 20px; font-style: italic; color: #7a8a7a; font-size: 1.1rem;">Будем очень счастливы разделить с вами нашу радость:</p>
     </header>
 
     <!-- Церемония -->
     <section class="card fade-element">
       <h2>Торжественная регистрация</h2>
       <p>Мы будем счастливы видеть вас в этот важный момент.</p>
-      <p><span class="highlight">15:10</span></p>
+      <p><span class="highlight">15:00</span></p>
       <p>Нижегородский Дом бракосочетания<br/>ул. Малая Покровская, 9</p>
+    </section>
+
+      <section class="card fade-element">
+      <p>Сразу после регистрации мы уедем на небольшую прогулку и фотосессию — вдвоём, как молодожёны. А у вас будет небольшая пауза.</p>
+      <p>Мы советуем: прогуляться по Большой Покровской — это совсем рядом. Там приятная атмосфера, красивые здания, где можно сделать классные фото на телефон и просто пообщаться друг с другом.</p>
     </section>
 
     <!-- Банкет -->
     <section class="card fade-element">
-      <h2>Праздничный ужин</h2>
-      <p>Продолжим вечер в тёплой атмосфере любви и дружбы.</p>
+      <h2>17:00-17:15 – Встречаемся в кафе</h2>
+      <p>Для нас будет очень ценно, если вы напишете нам несколько слов в Книге пожеланий и сделаете снимок на Polaroid (фото можно забрать себе или вклеить в книгу).
+18:00 – Банкет</p>
       <p>Ресторан <span class="highlight">«Пентхаус»</span></p>
       <p>г. Нижний Новгород<br/>ул. Большая Покровская, 61</p>
     </section>
 
-    <!-- Таймер -->
-    <section class="card fade-element">
-      <h2>До встречи осталось</h2>
-      <div class="timer-wrapper" id="countdown">
-        <div class="time-unit"><span class="time-val" id="days">00</span><span class="time-label">Дней</span></div>
-        <div class="time-unit"><span class="time-val" id="hours">00</span><span class="time-label">Часов</span></div>
-        <div class="time-unit"><span class="time-val" id="minutes">00</span><span class="time-label">Минут</span></div>
-        <div class="time-unit"><span class="time-val" id="seconds">00</span><span class="time-label">Секунд</span></div>
-      </div>
-    </section>
-
+    
     <!-- Пожелание -->
     <section class="card fade-element" style="border-left: 3px solid var(--accent-color);">
-      <h2>О важном</h2>
-      <p>Дорогие гости!</p>
-      <p>Мы ценим искренность и нежность момента.<br/>
-      Поэтому просим вас воздержаться от традиционных криков <span class="highlight">«Горько!»</span>.</p>
+      <h2>И одна важная просьба♥️</h2>
+      <p>Мы будем признательны, если вы воздержитесь от криков „Горько!“, ведь поцелуй — это знак выражения чувств, он не может быть по заказу. Вместо этого — улыбнитесь нам или обнимите. Нам так будет теплее.</p>
+      <p>Ваше присутствие будет для нас самым дорогим подарком!
+Если будут вопросы — мы всегда на связи.</p>
       <p style="font-size: 0.95rem; color: #7a8a7a; margin-top: 15px;">Ваши улыбки и аплодисменты — лучшая награда для нас.</p>
     </section>
 
     <footer>
-      С любовью,<br>Евгений и Юлия
+      Обнимаем,<br>Евгений и Юлия
     </footer>
 
   </div>
@@ -325,28 +321,6 @@
       observer.observe(el);
     });
 
-    // --- Таймер обратного отсчёта ---
-    const weddingDate = new Date("May 16, 2026 15:10:00").getTime();
-
-    const timer = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").innerText = days < 10 ? "0" + days : days;
-      document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
-      document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
-      document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        document.getElementById("countdown").innerHTML = "<h3>Ура! День настал! 🌿</h3>";
-      }
-    }, 1000);
   </script>
 
 </body>
